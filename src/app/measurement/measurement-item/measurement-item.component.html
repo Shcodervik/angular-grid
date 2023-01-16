@@ -1,1 +1,18 @@
-<p>measurement-item works!</p>
+<div class="row" *ngIf="measurement">
+  <div class="col">
+    {{measurement.date}}
+  </div>
+  <div class="col">
+    {{measurement.time}}
+  </div>
+  <div class="col">
+    {{measurement.source}}
+  </div>
+  <div class="col">
+    {{measurement.phase}}
+  </div>
+  <div class="col" (click)="edit()">
+    <img [src]="getSVGImage()" *ngIf="!isEditable"/>
+    <input *ngIf="isEditable" value="{{measurement.checked}}"/>
+  </div>
+</div>
