@@ -1,6 +1,6 @@
-import { LITER_A } from './../../constants/liter-a';
+import { VerifiedIconService } from '@app/verified-icon/verified-icon.service';
 import { Measurement } from '@measurement/measurement';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-measurement-item',
@@ -10,8 +10,11 @@ import { Component, OnInit, Input } from '@angular/core';
 export class MeasurementItemComponent implements OnInit {
   @Input() measurement!: Measurement;
   isEditable = false;
-  ngOnInit(): void {
+  verifiedIcon?: SVGElement = this.verifiedIconService.createVerifiedIcon();
 
+  constructor(private verifiedIconService: VerifiedIconService) {}
+  ngOnInit(): void {
+    this.verifiedIcon = this.verifiedIconService.addTextToVerifiedIcon(this.verifiedIcon, this.measurement.checked.substring(0,1));
   }
 
   edit(): void {
@@ -19,8 +22,11 @@ export class MeasurementItemComponent implements OnInit {
     console.log("isEditable=", this.isEditable);
   }
 
-  getSVGImage(): any {
-    return LITER_A;
+  getSVGImage(text: string): any {
+    this.verifiedIcon = this.verifiedIconService.addTextToVerifiedIcon(this.verifiedIcon, text.substring(0,1));
   }
+
+
+  ​
 
 }

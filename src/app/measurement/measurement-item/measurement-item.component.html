@@ -12,7 +12,7 @@
     {{measurement.phase}}
   </div>
   <div class="col" (click)="edit()">
-    <img [src]="getSVGImage()" *ngIf="!isEditable"/>
+    {{verifiedIcon}}
     <input *ngIf="isEditable" value="{{measurement.checked}}"/>
   </div>
 </div>
