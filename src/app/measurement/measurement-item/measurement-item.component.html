@@ -11,8 +11,9 @@
   <div class="col">
     {{measurement.phase}}
   </div>
+
   <div class="col" (click)="edit()">
-    {{verifiedIcon}}
+    <div *ngIf="!isEditable" #icon></div>
     <input *ngIf="isEditable" value="{{measurement.checked}}"/>
   </div>
 </div>

@@ -1,20 +1,24 @@
 import { VerifiedIconService } from '@app/verified-icon/verified-icon.service';
 import { Measurement } from '@measurement/measurement';
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-measurement-item',
   templateUrl: './measurement-item.component.html',
   styleUrls: ['./measurement-item.component.css']
 })
-export class MeasurementItemComponent implements OnInit {
+export class MeasurementItemComponent implements AfterViewInit {
   @Input() measurement!: Measurement;
+  @ViewChild('icon') icon!: ElementRef;
   isEditable = false;
-  verifiedIcon?: SVGElement = this.verifiedIconService.createVerifiedIcon();
+  verifiedIconDefault?: SVGElement = this.verifiedIconService.createVerifiedIcon();
+  verifiedIcon?: SVGElement;
+
 
   constructor(private verifiedIconService: VerifiedIconService) {}
-  ngOnInit(): void {
-    this.verifiedIcon = this.verifiedIconService.addTextToVerifiedIcon(this.verifiedIcon, this.measurement.checked.substring(0,1));
+  ngAfterViewInit(): void {
+    this.verifiedIcon = this.verifiedIconService.addTextToVerifiedIcon(this.verifiedIconDefault, this.measurement.checked.substring(0,1));
+    this.icon.nativeElement.appendChild(this.verifiedIcon);
   }
 
   edit(): void {
@@ -23,7 +27,9 @@ export class MeasurementItemComponent implements OnInit {
   }
 
   getSVGImage(text: string): any {
-    this.verifiedIcon = this.verifiedIconService.addTextToVerifiedIcon(this.verifiedIcon, text.substring(0,1));
+    this.verifiedIcon = this.verifiedIconService.addTextToVerifiedIcon(this.verifiedIconDefault, text.substring(0,1));
+    this.icon.nativeElement.appendChild(this.verifiedIcon);
+
   }
 
 
