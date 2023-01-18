@@ -1,18 +1,18 @@
-<div class="grid" *ngIf="measurement">
-  <div class="g-col-md-4">
+<div class="row" *ngIf="measurement">
+  <div class="col">
     {{measurement.date}}
   </div>
-  <div class="g-col-md-4">
+  <div class="col">
     {{measurement.time}}
   </div>
-  <div class="g-col-md-4">
+  <div class="col">
     {{measurement.source}}
   </div>
-  <div class="g-col-md-4">
+  <div class="col">
     {{measurement.phase}}
   </div>
-  <div class="g-col-md-6" (click)="setEditable('true')">
-    <input #verified *ngIf="isEditable" (keyup.enter)="update(verified.value)" value="{{measurement.checked}}"/>
-    <div #icon [hidden]="isEditable" [title]="measurement.checked"></div>
+  <div class="col" (click)="setEditable('true')">
+    <input #verified *ngIf="isEditable" (keyup.enter)="update(verified.value)" value="{{measurement.checked}}" type="text" class="form-control"/>
+    <span #icon [hidden]="isEditable" [title]="measurement.checked"></span>
   </div>
 </div>
