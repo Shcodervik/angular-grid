@@ -4,5 +4,5 @@
       {{title}}
     </div>
   </div>
-  <app-measurement-item [measurement]="measurement" *ngFor="let measurement of measurementList"></app-measurement-item>
+  <app-measurement-item (verificationChangeEvent)="updateMeasurement($event)" [measurement]="measurement" *ngFor="let measurement of measurementList"></app-measurement-item>
 </div>

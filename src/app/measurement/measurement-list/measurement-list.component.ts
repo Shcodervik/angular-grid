@@ -19,4 +19,9 @@ export class MeasurementListComponent implements OnInit {
   getMeasurements(): void {
     this.measurementService.getMeasurements().subscribe(measurements => this.measurementList = measurements);
   }
+
+  updateMeasurement(measurement: Measurement): void {
+    this.measurementService.updateMeasurement(measurement);
+  }
+
 }

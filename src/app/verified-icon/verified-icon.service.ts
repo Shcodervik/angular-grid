@@ -8,7 +8,7 @@ export class VerifiedIconService {
 
   constructor() { }
 
-  createVerifiedIcon(): SVGElement {
+  createDefaultVerifiedIcon(): SVGElement {
     const iconSvg = document.createElementNS(VERIFIED_NS, 'svg');
     const iconPath = document.createElementNS(VERIFIED_NS, 'path');
     iconSvg.setAttribute('width', '24');
@@ -25,7 +25,8 @@ export class VerifiedIconService {
     return iconSvg as SVGElement;
   }
 
-  addTextToVerifiedIcon(iconSvg: SVGElement|undefined, text: string): SVGElement|undefined {
+  addTextToVerifiedIcon(text: string): SVGElement|undefined {
+    const iconSvg = this.createDefaultVerifiedIcon();
     const iconPath = document.createElementNS('http://www.w3.org/2000/svg', 'text');
     iconPath.textContent = text;
     iconPath.setAttribute("x", ALIGN);
