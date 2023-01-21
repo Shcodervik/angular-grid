@@ -8,7 +8,7 @@ import { MeasurementService } from '@measurement/measurement.service';
   styleUrls: ['./measurement-list.component.css']
 })
 export class MeasurementListComponent implements OnInit {
-  titles: string[] = ['Дата', 'Время', 'Источник', 'Фаза', 'Проверено'];
+  titles: string[] = ['Дата', 'Время', 'Источник', 'Фаза', 'U, kB', 'I, A', 'P, MBt', 'Q, Mbap', 'cos φ', 'Проверено'];
   measurementList?: Measurement[];
 
   constructor(private measurementService: MeasurementService) {}

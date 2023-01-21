@@ -21,7 +21,8 @@ export class MeasurementItemComponent implements AfterViewInit {
   constructor(private verifiedIconService: VerifiedIconService) {}
 
   ngAfterViewInit(): void {
-    this.verifiedIcon = this.verifiedIconService.addTextToVerifiedIcon(this.measurement.checked.substring(0,1));
+    const verifiedIconText = this.measurement.checked ? this.measurement.checked.substring(0,1) : "";
+    this.verifiedIcon = this.verifiedIconService.addTextToVerifiedIcon(verifiedIconText);
     this.icon.nativeElement.appendChild(this.verifiedIcon);
   }
 

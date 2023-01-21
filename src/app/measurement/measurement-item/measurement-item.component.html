@@ -1,4 +1,4 @@
-<div class="row" *ngIf="measurement">
+
   <div class="col">
     {{measurement.date}}
   </div>
@@ -11,8 +11,22 @@
   <div class="col">
     {{measurement.phase}}
   </div>
-  <div class="col" (click)="setEditable('true')">
+  <div class="col">
+    {{measurement.voltage}}
+  </div>
+  <div class="col">
+    {{measurement.amperage}}
+  </div>
+  <div class="col">
+    {{measurement.truePower}}
+  </div>
+  <div class="col">
+    {{measurement.reactivePower}}
+  </div>
+  <div class="col">
+    {{measurement.cos}}
+  </div>
+  <div class="col verified" (click)="setEditable('true')">
     <input #verified *ngIf="isEditable" (keyup.enter)="update(verified.value)" value="{{measurement.checked}}" type="text" class="form-control"/>
     <span #icon [hidden]="isEditable" [title]="measurement.checked"></span>
   </div>
-</div>
