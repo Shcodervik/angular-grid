@@ -1,0 +1,8 @@
+<div class="container" *ngIf="measurementList">
+  <div class="row">
+    <div class="col" *ngFor="let title of titles">
+      {{title}}
+    </div>
+  </div>
+  <app-measurement-item (verificationChangeEvent)="updateMeasurement($event)" [measurement]="measurement" *ngFor="let measurement of measurementList"></app-measurement-item>
+</div>
