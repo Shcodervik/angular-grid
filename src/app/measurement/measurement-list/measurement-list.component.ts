@@ -8,7 +8,7 @@ import { MeasurementService } from '@measurement/measurement.service';
   styleUrls: ['./measurement-list.component.css']
 })
 export class MeasurementListComponent implements OnInit {
-  titles: string[] = ['Дата', 'Время', 'Источник', 'Фаза', 'Проверено'];
+  titles: string[] = ['Дата', 'Время', 'Источник', 'Фаза', 'U, kB', 'I, A', 'P, MBt', 'Q, Mbap', 'cos φ', 'Проверено'];
   measurementList?: Measurement[];
 
   constructor(private measurementService: MeasurementService) {}
@@ -19,4 +19,9 @@ export class MeasurementListComponent implements OnInit {
   getMeasurements(): void {
     this.measurementService.getMeasurements().subscribe(measurements => this.measurementList = measurements);
   }
+
+  updateMeasurement(measurement: Measurement): void {
+    this.measurementService.updateMeasurement(measurement);
+  }
+
 }

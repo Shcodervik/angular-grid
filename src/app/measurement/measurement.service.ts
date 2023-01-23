@@ -16,4 +16,9 @@ export class MeasurementService {
   public getMeasurements(): Observable<Measurement[]> {
     return of(this.measurements);
   }
+
+  public updateMeasurement(measurement: Measurement): void {
+    const index = this.measurements.findIndex(element => element.id == measurement.id);
+    if(this.measurements[index]) this.measurements[index].checked = measurement.checked;
+  }
 }
