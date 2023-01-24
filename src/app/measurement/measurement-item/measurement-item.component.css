@@ -1,8 +1,12 @@
 .col {
   border: 1px solid #e0e0e0;
   min-width: 0;
-  padding: 0px 5px;
+  padding: 5px 5px;
+  min-height: 35px;
 }
-input {
+.verified {
+  text-align: center;
+}
+/* input {
   font-size: calc(0.5rem + 0.3vw);
-}
+} */
