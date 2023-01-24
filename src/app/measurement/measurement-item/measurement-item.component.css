@@ -7,6 +7,7 @@
 .verified {
   text-align: center;
 }
-/* input {
+.verified input {
   font-size: calc(0.5rem + 0.3vw);
-} */
+  height: 25px;
+}
