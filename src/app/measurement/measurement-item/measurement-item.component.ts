@@ -38,6 +38,7 @@ export class MeasurementItemComponent implements AfterViewInit {
       this.isEditable = true;
       setTimeout(() => { // this will make the execution after the above boolean has changed
         this.verifiedInput.nativeElement.focus();
+        this.verifiedInput.nativeElement.select();
       }, 0);
     }
   }

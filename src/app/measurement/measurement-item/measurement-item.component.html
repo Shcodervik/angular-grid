@@ -27,7 +27,13 @@
     {{measurement.cos}}
   </div>
   <div class="col verified" (click)="setEditable('true')">
-    <input #verified *ngIf="isEditable" (keyup.enter)="update(verified.value)" value="{{measurement.checked}}" type="text" class="form-control"/>
+    <input #verified
+      *ngIf="isEditable"
+      (keyup.enter)="update(verified.value)"
+      (focusout)="update(verified.value)"
+      value="{{measurement.checked}}"
+      type="text"
+      class="form-control"/>
     <span #icon [hidden]="isEditable" [title]="measurement.checked"></span>
   </div>
 </div>
