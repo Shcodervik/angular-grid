@@ -48,7 +48,7 @@ export const MEASUREMENTS: Measurement[] = [
     checked: "Сидоров Геннадий Петрович"
   },
   {
-    id: 4,
+    id: 5,
     date: "02.03.2022",
     time: "17:43:51",
     source: "Регистратор",
