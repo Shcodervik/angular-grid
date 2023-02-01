@@ -1,0 +1,10 @@
+.container {
+  min-width: 100%;
+  background-color: #005baa;
+}
+
+footer {
+  font-size: calc(0.5rem + 0.3vw);
+  color: #fff;
+  height: 37px;
+}
