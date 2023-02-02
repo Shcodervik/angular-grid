@@ -1,7 +1,57 @@
+.col {
+  margin: 0;
+  padding: 0;
+}
 .navbar {
   min-width: 100%;
   background-color: #005baa;
+  margin: 0;
+  padding: 0;
+}
+.navbar.navbar {
+  min-width: 50%;
 }
 .navbar-text {
   color: #fff;
+}
+.nav-item {
+  margin-right: 1rem;
+}
+.row {
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-icon::before {
+  content: "";
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 1.5rem;
+}
+
+.measurements, .reports, .service {
+  border-radius: 0;
+}
+.measurements::before {
+  background-image: url(/assets/images/timeline.svg);
+}
+.reports::before {
+  background-image: url(/assets/images/reports.svg);
+}
+.reports:hover::before {
+  background-image: url(/assets/images/reports-black.svg);
+}
+.service::before {
+  background-image: url(/assets/images/service.svg);
+}
+.service:hover::before {
+  background-image: url(/assets/images/service-black.svg);
+}
+.btn-first::before {
+  background-image: url(/assets/images/button-compact.svg);
+}
+.btn-second::before {
+  background-image: url(/assets/images/button-week.svg);
 }

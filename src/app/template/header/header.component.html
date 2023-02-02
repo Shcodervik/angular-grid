@@ -1,8 +1,23 @@
-<nav class="navbar">
-  <ul class="nav">
-    <li class="nav-item"><img class="mx-4" width="133px" src="assets/images/logo.svg"/></li>
-    <li class="nav-item"><span class="navbar-text">
-      Контрольные замеры
-    </span></li>
-  </ul>
+<nav class="navbar px-4">
+  <div class="navbar d-inline-flex">
+    <div class="nav-item">
+      <a class="navbar-brand"><img class="py-2" width="133px" src="assets/images/logo.svg"/></a>
+      <span class="navbar-text h4">
+        {{ headerText }}
+      </span>
+    </div>
+    <div class="nav-item">
+      <form class="form-inline">
+        <button class="btn btn-light btn-icon measurements d-inline-flex justify-content-center align-items-top" type="button">Замеры</button>
+        <button class="btn btn-outline-light btn-icon reports d-inline-flex justify-content-center align-items-top" type="button">Отчеты</button>
+        <button class="btn btn-outline-light btn-icon service  d-inline-flex justify-content-center align-items-top" type="button">Сервис</button>
+      </form>
+    </div>
+  </div>
+  <div class="navbar d-inline-flex justify-content-end">
+    <form class="form-inline">
+      <button class="btn btn-outline-light btn-icon btn-first justify-content-center align-items-top" type="button"></button>
+      <button class="btn btn-light btn-icon btn-second justify-content-center align-items-top" type="button"></button>
+    </form>
+  </div>
 </nav>

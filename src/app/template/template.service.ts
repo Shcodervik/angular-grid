@@ -1,4 +1,4 @@
-import { VERSION_TEXT, VERSION_NUMBER } from '@constants/template';
+import { VERSION_TEXT, VERSION_NUMBER, HEADER_TEXT } from '@constants/template';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -13,5 +13,8 @@ export class TemplateService {
   }
   public getVersionNumber(): string {
     return VERSION_NUMBER;
+  }
+  public getHeaderText(): string {
+    return HEADER_TEXT;
   }
 }
