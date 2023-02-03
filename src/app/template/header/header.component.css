@@ -7,14 +7,17 @@
   background-color: #005baa;
   margin: 0;
   padding: 0;
+  height: 80px;
+}
+.navbar-brand {
+  height: 80px;
 }
 .navbar.navbar {
   min-width: 50%;
 }
 .navbar-text {
   color: #fff;
-  position: absolute;
-  bottom: 3px;
+  margin-top: 32px;
 }
 .nav-item {
   margin-right: 1rem;
