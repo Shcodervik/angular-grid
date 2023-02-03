@@ -5,12 +5,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from '@app/app.component';
 import { MeasurementListComponent } from '@measurement/measurement-list/measurement-list.component';
 import { MeasurementItemComponent } from './measurement/measurement-item/measurement-item.component';
+import { FooterComponent } from './template/footer/footer.component';
+import { HeaderComponent } from './template/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MeasurementListComponent,
-    MeasurementItemComponent
+    MeasurementItemComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

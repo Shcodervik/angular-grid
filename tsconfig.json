@@ -27,6 +27,7 @@
       "@app/*": ["./src/app/*"],
       "@measurement/*": ["./src/app/measurement/*"],
       "@constants/*": ["./src/app/constants/*"],
+      "@template/*": ["./src/app/template/*"],
     },
   },
   "angularCompilerOptions": {
