@@ -13,6 +13,8 @@
 }
 .navbar-text {
   color: #fff;
+  position: absolute;
+  bottom: 3px;
 }
 .nav-item {
   margin-right: 1rem;
@@ -34,6 +36,13 @@
 .measurements, .reports, .service {
   border-radius: 0;
 }
+.btn-compact, .btn-week {
+  width: 42px !important;
+  height: 38px !important;
+}
+.form-view:nth-child(0) {
+  border-radius: 5px 5px 0px 0px;
+}
 .measurements::before {
   background-image: url(/assets/images/timeline.svg);
 }
@@ -49,9 +58,9 @@
 .service:hover::before {
   background-image: url(/assets/images/service-black.svg);
 }
-.btn-first::before {
+.btn-compact::before {
   background-image: url(/assets/images/button-compact.svg);
 }
-.btn-second::before {
+.btn-week::before {
   background-image: url(/assets/images/button-week.svg);
 }
