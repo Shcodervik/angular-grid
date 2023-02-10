@@ -7,6 +7,7 @@ import { MeasurementListComponent } from '@measurement/measurement-list/measurem
 import { MeasurementItemComponent } from './measurement/measurement-item/measurement-item.component';
 import { FooterComponent } from './template/footer/footer.component';
 import { HeaderComponent } from './template/header/header.component';
+import { ContentComponent } from './template/content/content.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HeaderComponent } from './template/header/header.component';
     MeasurementListComponent,
     MeasurementItemComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,
