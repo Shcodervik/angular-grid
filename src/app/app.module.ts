@@ -1,3 +1,4 @@
+import { NgxResizableModule } from '@3dgenomes/ngx-resizable';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,11 +15,12 @@ import { HeaderComponent } from './template/header/header.component';
     MeasurementListComponent,
     MeasurementItemComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    NgxResizableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

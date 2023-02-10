@@ -1,18 +1,26 @@
 <app-header></app-header>
 <div class="container">
-  <div class="row mb-3">
-    <div class="col-md-6 mb-3">
-      <div class="container">
-        <div class="row">
-          <div class="col">left table 1 from 3</div>
-          <div class="col">left table 2 from 3</div>
-          <div class="col">left table 3 from 3</div>
+  <!-- <div class="row mb-3"> -->
+  <rsz-layout class="row" [directions]="['none']" [rFlex]="false" style="width:100%">
+    <rsz-layout class="cell" [directions]="['right']" [rFlex]="true">
+        <div class="col-md-6 mb-3">
+          <div class="container">
+            <div class="row">
+              <div class="col">left table 1 from 3</div>
+              <div class="col">left table 2 from 3</div>
+              <div class="col">left table 3 from 3</div>
+            </div>
+          </div>
         </div>
+    </rsz-layout>
+    <rsz-layout class="cell" [directions]="['rigth']" [rFlex]="true">
+      <div class="col-md-6 mb-3">
+        <app-measurement-list></app-measurement-list>
       </div>
-    </div>
-    <div class="col-md-6 mb-3">
-      <app-measurement-list></app-measurement-list>
-    </div>
-  </div>
+    </rsz-layout>
+
+
+</rsz-layout>
 </div>
+<!-- </div> -->
 <app-footer></app-footer>
