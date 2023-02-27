@@ -25,7 +25,8 @@
   min-width: 400px;
 }
 #main > div {
-  min-width: 900px;
+  min-width: 915px;
+  padding: 0;
 }
 #dragbar {
   background-color: #f2f2f2;
@@ -48,6 +49,8 @@
 #panel {
   width:100%;
   border-bottom: 1px solid #f2f2f2;
+  padding: 0;
+  margin: 0;
 }
 #footer {
   background-color: PaleGoldenRod;

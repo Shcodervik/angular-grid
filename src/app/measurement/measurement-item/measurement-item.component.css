@@ -4,6 +4,9 @@
   padding: 5px 5px;
   min-height: 37px;
 }
+.col:first-child {
+  text-align: center;
+}
 .verified {
   text-align: center;
 }
