@@ -1,5 +1,5 @@
 <div class="container">
-  <div id="panel" class="row mb-3" (mouseup)="mouseup($event)">
+  <div id="panel" class="row mb-3 h100percent" (mouseup)="mouseup($event)">
     <div id="sidebar" class="col-md-6 mb-3">
       <div class="container">
         <div class="row">
@@ -8,10 +8,12 @@
           <div class="col">left table 3 from 3</div>
         </div>
       </div>
-      <div id="dragbar" (mousedown)="mousedown($event)"></div>
     </div>
+    <div id="dragbar" class="mb-3" (mousedown)="mousedown($event)"></div>
     <div id="main" class="col-md-6 mb-3">
-      <app-measurement-list></app-measurement-list>
+      <div class="container">
+        <app-measurement-list></app-measurement-list>
+      </div>
     </div>
   </div>
 </div>
