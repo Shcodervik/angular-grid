@@ -40,17 +40,11 @@
   border-radius: 0;
 }
 .btn-compact, .btn-week {
-  width: 50px;
-  height: 38px;
+  width: 42px !important;
+  height: 38px !important;
 }
-.form-view button {
-  border-radius: 0px 0px 0px 0px;
-}
-.form-view button:first-child {
-  border-radius: 5px 0px 0px 5px;
-}
-.form-view button:last-child {
-  border-radius: 0px 5px 5px 0px;
+.form-view:nth-child(0) {
+  border-radius: 5px 5px 0px 0px;
 }
 .measurements::before {
   background-image: url(/assets/images/timeline.svg);
@@ -69,9 +63,6 @@
 }
 .btn-compact::before {
   background-image: url(/assets/images/button-compact.svg);
-}
-.btn-compact:hover::before {
-  background-image: url(/assets/images/button-compact-black.svg);
 }
 .btn-week::before {
   background-image: url(/assets/images/button-week.svg);
