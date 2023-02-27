@@ -8,6 +8,7 @@ import { MeasurementItemComponent } from './measurement/measurement-item/measure
 import { FooterComponent } from './template/footer/footer.component';
 import { HeaderComponent } from './template/header/header.component';
 import { ContentComponent } from './template/content/content.component';
+import { SimpleTableComponent } from './template/simple-table/simple-table.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ContentComponent } from './template/content/content.component';
     MeasurementItemComponent,
     FooterComponent,
     HeaderComponent,
-    ContentComponent
+    ContentComponent,
+    SimpleTableComponent
   ],
   imports: [
     BrowserModule,
