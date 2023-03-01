@@ -22,10 +22,9 @@ export class ContentComponent implements AfterViewInit {
     const box1 = document.getElementById('sidebar')!;
     const box2 = document.getElementById('main')!;
     const splitter = document.getElementById('dragbar')!.getBoundingClientRect();
-    box1.style.width = event.x + "px";
+    box1.style.width = `${event.x}px`;
     const difference = panel.getBoundingClientRect().width - splitter.width - event.x;
-    box2.style.width = difference + "px";
-    box2.style.left = box1.style.width + "px";
+    box2.style.width = `${difference}px`;
   }
 
   mouseup(event: any) {
