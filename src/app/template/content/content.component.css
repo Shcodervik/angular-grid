@@ -1,6 +1,6 @@
 #header {
   background-color: wheat;
-  width:100%;
+  width: 100%;
   height: 100px;
 }
 .container {
@@ -61,4 +61,14 @@
 }
 .h100percent {
   height: calc(100vh - 100px);
+}
+.h3::before {
+  background-image: url(/assets/images/equipment.svg);
+  content: "";
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: 5px;
 }
