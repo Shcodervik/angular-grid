@@ -1,16 +1,23 @@
-<div class="container">
-  <div id="panel" class="row mb-3 h100percent" (mouseup)="mouseup($event)">
-    <div id="sidebar" class="col-md-6 mb-3">
-      <div class="container">
-        <app-simple-table></app-simple-table>
-      </div>
+<div id="panel" class="row mb-3 h100percent" (mouseup)="mouseup($event)">
+  <div id="sidebar" class="col-md-6 mb-3">
+    <div class="container">
+      <div class="mt-3"><span class="substat ">Подстанции</span> > <span class="h3 mt-6">ТЭЦ ПГУ ГСР Энерго</span></div>
+      <ul class="nav nav-tabs mt-3">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">Подстанция</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Оборудование</a>
+        </li>
+      </ul>
+      <app-simple-table></app-simple-table>
     </div>
-    <div id="dragbar" class="mb-3" (mousedown)="mousedown($event)"></div>
-    <div id="main" class="col-md-6 mb-3">
-      <div class="h3 mt-3">РТСН\НН-2</div>
-      <div class="container">
-        <app-measurement-list></app-measurement-list>
-      </div>
+  </div>
+  <div id="dragbar" class="mb-3" (mousedown)="mousedown($event)"></div>
+  <div id="main" class="col-md-6 mb-3">
+    <div class="container">
+      <div class="rtsn h3 mt-3">РТСН\НН-2</div>
+      <app-measurement-list></app-measurement-list>
     </div>
   </div>
 </div>
