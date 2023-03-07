@@ -6,6 +6,7 @@
 .container {
   min-width: 100%;
   font-size: calc(0.5rem + 0.3vw);
+  padding-left: 31px;
 }
 .col-md-6 {
   width: 900px;
@@ -20,13 +21,14 @@
   width: calc(50% - 5px);
   overflow-x: auto;
   overflow-y: hidden;
+  padding: 0;
+  margin: 0;
 }
 #sidebar > div {
-  min-width: 400px;
+  min-width: 440px;
 }
 #main > div {
   min-width: 915px;
-  padding: 0;
 }
 #dragbar {
   background-color: #f2f2f2;
@@ -62,7 +64,7 @@
 .h100percent {
   height: calc(100vh - 100px);
 }
-.h3::before {
+.rtsn::before {
   background-image: url(/assets/images/equipment.svg);
   content: "";
   display: inline-block;
@@ -71,4 +73,29 @@
   height: 2rem;
   position: relative;
   top: 5px;
+}
+.substat::before {
+  background-image: url(/assets/images/list.svg);
+  content: "";
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 1.4rem;
+  height: 1.2rem;
+  position: relative;
+  top: 5px;
+}
+.substat {
+  font-size: 16px;
+  line-height: 22px;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  padding: 6px 12px;
+  gap: 8px;
+}
+.h3 {
+  font-size: 22px;
+  line-height: 29px;
+}
+a.nav-link {
+  padding: 8px 12px 8px 12px;
 }
