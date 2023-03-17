@@ -7,6 +7,7 @@
   min-width: 100%;
   font-size: calc(0.5rem + 0.3vw);
   padding-left: 31px;
+  margin: 16px 0px;
 }
 .col-md-6 {
   width: 900px;
@@ -22,7 +23,7 @@
   overflow-x: auto;
   overflow-y: hidden;
   padding: 0;
-  margin: 0;
+  margin:  0px 0px 16px 0px;
 }
 #sidebar > div {
   min-width: 440px;
@@ -64,6 +65,27 @@
 .h100percent {
   height: calc(100vh - 100px);
 }
+.top-line {
+  display: flex;
+  justify-content: space-between;
+}
+.btn-save {
+  background-color: #005BAA;
+  font-size: 16px;
+  height: 38px;
+  width: 129px;
+}
+.btn-save::before {
+  background-image: url(/assets/images/save.svg);
+  width: 16px !important;
+  height: 16px !important;
+}
+.breadcrumbs {
+  margin-bottom: 16px;
+}
+.breadcrumbs span:not(:first-child) {
+  margin-left: 10px;
+}
 .rtsn::before {
   background-image: url(/assets/images/equipment.svg);
   content: "";
@@ -92,10 +114,66 @@
   padding: 6px 12px;
   gap: 8px;
 }
+.right-link {
+  font-size: 24px;
+  color: #828282;
+}
 .h3 {
   font-size: 22px;
   line-height: 29px;
+  font-weight: 400;
 }
 a.nav-link {
   padding: 8px 12px 8px 12px;
+  font-size: 16px;
+}
+a.nav-link.active {
+  background-color:#f2f2f2;
+}
+.form-view {
+  margin-top: 16px;
+}
+.form-view button {
+  border-color: #CED4DA;
+  border-radius: 0px 0px 0px 0px;
+}
+.form-view button:first-child {
+  border-radius: 5px 0px 0px 5px;
+}
+.form-view button:last-child {
+  border-left: none;
+  border-radius: 0px 5px 5px 0px;
+}
+.btn-icon {
+  font-size: 15px;
+  padding-left: 16px;
+}
+.btn-icon::before {
+  content: "";
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+}
+.btn-list::before {
+  background-image: url(/assets/images/table-rows.svg);
+}
+.btn-statement::before {
+  background-image: url(/assets/images/table.svg);
+}
+.dropdown-area {
+  margin: 16px 0px;
+  font-size: 16px;
+}
+.dropdown-area > div {
+  display:inline-block;
+
+}
+.dropdown-area > div:not(:first-child) {
+  margin: 0px 10px;
+}
+.dropdown-toggle {
+  border: 1px solid #CED4DA;
+  margin: 0px 10px;
 }

@@ -1,15 +1,46 @@
-<div id="panel" class="row mb-3 h100percent" (mouseup)="mouseup($event)">
-  <div id="sidebar" class="col-md-6 mb-3">
+<div id="panel" class="row h100percent" (mouseup)="mouseup($event)">
+  <div id="sidebar" class="col-md-6">
     <div class="container">
-      <div class="mt-3"><span class="substat ">Подстанции</span> > <span class="h3 mt-6">ТЭЦ ПГУ ГСР Энерго</span></div>
-      <ul class="nav nav-tabs mt-3">
+      <div class="top-line">
+        <div class="breadcrumbs">
+          <span class="substat">Подстанции</span>
+          <span class="right-link">></span>
+          <span class="h3">ТЭЦ ПГУ ГСР Энерго</span>
+        </div>
+        <button disabled="true" class="btn btn-save btn-icon btn-primary">Сохранить</button>
+      </div>
+      <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Подстанция</a>
+          <a class="nav-link" href="#">Подстанция</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="#">Оборудование</a>
         </li>
       </ul>
+      <form class="form-view form-inline">
+        <button class="btn btn-light btn-icon btn-list justify-content-center align-items-top" type="button">Список</button>
+        <button class="btn btn-icon btn-statement justify-content-center align-items-top" type="button">Ведомость</button>
+      </form>
+      <div class="dropdown-area">
+        <div class="dropdown">
+          <label class="btn-label">Тип</label>
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+            Трансформаторы
+          </button>
+          <div class="dropdown-menu">
+            <button class="dropdown-item" type="button">...</button>
+          </div>
+        </div>
+        <div class="dropdown">
+          <label class="btn-label">РУ</label>
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+            110
+          </button>
+          <div class="dropdown-menu">
+            <button class="dropdown-item" type="button">...</button>
+          </div>
+        </div>
+      </div>
       <app-simple-table></app-simple-table>
     </div>
   </div>
