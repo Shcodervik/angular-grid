@@ -1,14 +1,22 @@
 .container {
   width: 100%;
-  font-size: calc(0.5rem + 0.3vw);
 }
-.col {
+.row {
+  font-size: 17px;
+  line-height: 22px;
+}
+.row:first-child .col {
   border: 1px solid #e0e0e0;
   min-width: 0;
   background-color: #f1f1f1;
   padding: 10px;
 }
-.col:first-child {
+.row:first-child .col:first-child {
   text-align: center;
+  max-width: 37px;
+}
+.add-measurement {
+  height: 37px;
+  color: #005BAA;
 }
 

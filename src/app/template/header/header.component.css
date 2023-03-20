@@ -37,15 +37,16 @@ div.navbar.navbar {
   content: "";
   display: inline-block;
   background-repeat: no-repeat;
-  width: 2rem;
-  height: 1.5rem;
 }
 
 .measurements, .reports, .service {
   border-radius: 0;
 }
+.form-view {
+  margin-right:30px;
+}
 .btn-compact, .btn-week {
-  width: 50px;
+  width: 42px;
   height: 38px;
 }
 .form-view button {
@@ -74,10 +75,19 @@ div.navbar.navbar {
 }
 .btn-compact::before {
   background-image: url(/assets/images/button-compact.svg);
+  width: 14px;
+  height: 20px;
+  position: relative;
+  top: 2px;
 }
 .btn-compact:hover::before {
   background-image: url(/assets/images/button-compact-black.svg);
 }
 .btn-week::before {
   background-image: url(/assets/images/button-week.svg);
+  width: 19px;
+  height: 14px;
+  position: relative;
+  top: 1px;
+  right: 2px;
 }
