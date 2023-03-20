@@ -1,11 +1,14 @@
 <div class="container" *ngIf="measurementList">
   <div class="row">
-    <div class="col col-md-1">
+    <div class="col">
       <input type="checkbox"/>
     </div>
     <div class="col" *ngFor="let title of titles">
       {{title}}
     </div>
+  </div>
+  <div class="row">
+    <div class="col col-12 add-measurement">+ Добавить новый замер</div>
   </div>
   <app-measurement-item
     (verificationChangeEvent)="updateMeasurement($event)"

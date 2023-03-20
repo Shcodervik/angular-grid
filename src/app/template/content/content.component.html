@@ -17,28 +17,34 @@
           <a class="nav-link active" href="#">Оборудование</a>
         </li>
       </ul>
-      <form class="form-view form-inline">
+      <form class="form-view form-view-left form-inline">
         <button class="btn btn-light btn-icon btn-list justify-content-center align-items-top" type="button">Список</button>
         <button class="btn btn-icon btn-statement justify-content-center align-items-top" type="button">Ведомость</button>
       </form>
-      <div class="dropdown-area">
-        <div class="dropdown">
-          <label class="btn-label">Тип</label>
-          <button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-            Трансформаторы
-          </button>
-          <div class="dropdown-menu">
-            <button class="dropdown-item" type="button">...</button>
+      <div class="top-line">
+        <div class="dropdown-area">
+          <div class="dropdown">
+            <label class="btn-label">Тип</label>
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+              Трансформаторы
+            </button>
+            <div class="dropdown-menu">
+              <button class="dropdown-item" type="button">...</button>
+            </div>
+          </div>
+          <div class="dropdown">
+            <label class="btn-label">РУ</label>
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+              110
+            </button>
+            <div class="dropdown-menu">
+              <button class="dropdown-item" type="button">...</button>
+            </div>
           </div>
         </div>
-        <div class="dropdown">
-          <label class="btn-label">РУ</label>
-          <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
-            110
-          </button>
-          <div class="dropdown-menu">
-            <button class="dropdown-item" type="button">...</button>
-          </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+          <label class="form-check-label" for="flexSwitchCheckDefault">Схема</label>
         </div>
       </div>
       <app-simple-table></app-simple-table>
@@ -48,6 +54,23 @@
   <div id="main" class="col-md-6 mb-3">
     <div class="container">
       <div class="rtsn h3 mt-3">РТСН\НН-2</div>
+      <div class="btn-line-right">
+        <form class="form-view form-view-right form-inline">
+          <button class="btn btn-outline-primary btn-edit btn-icon-right justify-content-center align-items-top" type="button">Редактировать</button>
+          <button class="btn btn-outline-primary btn-checked btn-icon-right justify-content-center align-items-top" type="button">Проверено</button>
+          <button class="btn btn-outline-primary btn-delete btn-icon-right justify-content-center align-items-top" type="button">Удалить</button>
+        </form>
+        <div class="btn-group">
+          <form class="form-view form-view-right form-inline">
+            <button class="btn btn-outline-primary btn-expand btn-icon-right justify-content-center align-items-top" type="button"></button>
+            <button class="btn btn-outline-primary btn-view-week btn-icon-right justify-content-center align-items-top" type="button"></button>
+          </form>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Группировать по дате</label>
+          </div>
+        </div>
+      </div>
       <app-measurement-list></app-measurement-list>
     </div>
   </div>

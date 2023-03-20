@@ -5,8 +5,8 @@
 }
 .container {
   min-width: 100%;
-  font-size: calc(0.5rem + 0.3vw);
-  padding-left: 31px;
+  /* font-size: calc(0.5rem + 0.3vw); */
+  padding: 0px 30px;
   margin: 16px 0px;
 }
 .col-md-6 {
@@ -73,10 +73,11 @@
   background-color: #005BAA;
   font-size: 16px;
   height: 38px;
-  width: 129px;
+  min-width: 129px;
 }
 .btn-save::before {
   background-image: url(/assets/images/save.svg);
+  border-color: #005BAA;
   width: 16px !important;
   height: 16px !important;
 }
@@ -85,6 +86,9 @@
 }
 .breadcrumbs span:not(:first-child) {
   margin-left: 10px;
+}
+.rtsn {
+  margin: 0px 0px 24px 0px;
 }
 .rtsn::before {
   background-image: url(/assets/images/equipment.svg);
@@ -130,17 +134,17 @@ a.nav-link {
 a.nav-link.active {
   background-color:#f2f2f2;
 }
-.form-view {
+.form-view-left {
   margin-top: 16px;
 }
-.form-view button {
+.form-view-left button {
   border-color: #CED4DA;
   border-radius: 0px 0px 0px 0px;
 }
-.form-view button:first-child {
+.form-view-left button:first-child {
   border-radius: 5px 0px 0px 5px;
 }
-.form-view button:last-child {
+.form-view-left button:last-child {
   border-left: none;
   border-radius: 0px 5px 5px 0px;
 }
@@ -176,4 +180,58 @@ a.nav-link.active {
 .dropdown-toggle {
   border: 1px solid #CED4DA;
   margin: 0px 10px;
+}
+.form-check {
+  margin: auto 0;
+}
+.btn-outline-primary {
+  color:#005BAA;
+  border-color: #005BAA;
+}
+.form-view-right {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+.form-view-right > button:not(:first-child) {
+  margin-left: 16px;
+}
+.btn-icon-right::before {
+  content: "";
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  position: relative;
+  top: 3px;
+}
+.btn-edit::before {
+  background-image: url(/assets/images/edit.svg);
+}
+.btn-checked::before {
+  background-image: url(/assets/images/check.svg);
+}
+.btn-delete::before {
+  background-image: url(/assets/images/delete.svg);
+}
+.btn-line-right {
+  justify-content: space-between;
+  display: flex;
+}
+.btn-expand, .btn-view-week {
+  border-color:#CED4DA;
+}
+.btn-expand::before {
+  background-image: url(/assets/images/expand.svg);
+  margin-right: 0px;
+}
+.btn-view-week::before {
+  background-image: url(/assets/images/view-week.svg);
+  margin-right: 0px;
+  width: 18px;
+}
+.btn-group > div {
+  margin-left: 16px;
+  position: relative;
+  bottom: 7px;
 }
