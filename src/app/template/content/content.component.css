@@ -5,8 +5,8 @@
 }
 .container {
   min-width: 100%;
-  font-size: calc(0.5rem + 0.3vw);
-  padding-left: 31px;
+  /* font-size: calc(0.5rem + 0.3vw); */
+  padding: 0px 30px;
   margin: 16px 0px;
 }
 .col-md-6 {
@@ -73,7 +73,7 @@
   background-color: #005BAA;
   font-size: 16px;
   height: 38px;
-  width: 129px;
+  min-width: 129px;
 }
 .btn-save::before {
   background-image: url(/assets/images/save.svg);
@@ -176,4 +176,7 @@ a.nav-link.active {
 .dropdown-toggle {
   border: 1px solid #CED4DA;
   margin: 0px 10px;
+}
+.form-check {
+  margin: auto 0;
 }
