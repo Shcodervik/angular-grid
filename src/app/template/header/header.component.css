@@ -60,15 +60,21 @@ div.navbar.navbar {
 }
 .measurements::before {
   background-image: url(/assets/images/timeline.svg);
+  width: 2rem;
+  height: 1.5rem;
 }
 .reports::before {
   background-image: url(/assets/images/reports.svg);
+  width: 2rem;
+  height: 1.5rem;
 }
 .reports:hover::before {
   background-image: url(/assets/images/reports-black.svg);
 }
 .service::before {
   background-image: url(/assets/images/service.svg);
+  width: 2rem;
+  height: 1.5rem;
 }
 .service:hover::before {
   background-image: url(/assets/images/service-black.svg);
