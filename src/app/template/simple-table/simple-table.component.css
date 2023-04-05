@@ -14,3 +14,9 @@
   padding: 5px 5px;
   min-height: 37px;
 }
+.row > .col:not(:last-child) {
+  border-right: none;
+}
+.row:not(:last-child) .col {
+  border-bottom: none;
+}

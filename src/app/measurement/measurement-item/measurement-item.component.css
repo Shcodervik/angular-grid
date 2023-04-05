@@ -8,6 +8,12 @@
   padding: 5px 5px;
   min-height: 37px;
 }
+.row > div.col {
+  border-bottom: none;
+}
+.col:not(:last-child) {
+  border-right: none;
+}
 .col:first-child {
   text-align: center;
   max-width: 37px;
@@ -19,3 +25,10 @@
   /* font-size: calc(0.5rem + 0.3vw); */
   height: 25px;
 }
+.check {
+  padding: 0;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+}
+
