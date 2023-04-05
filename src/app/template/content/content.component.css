@@ -44,10 +44,11 @@
   background-repeat: space;
   background-size: 8px 12px;
   background-image: url(/assets/images/dots.svg);
-  width: 0.5rem;
-  height: 1.5rem;
-  position: absolute;
+  width: 10px;
+  height: 2.4rem;
+  position: relative;
   top: calc(50% - 50px);
+  left: 1px;
 }
 #panel {
   width:100%;
@@ -130,6 +131,7 @@
 a.nav-link {
   padding: 8px 12px 8px 12px;
   font-size: 16px;
+  color: #005BAA;
 }
 a.nav-link.active {
   background-color:#f2f2f2;
