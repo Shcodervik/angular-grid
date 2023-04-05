@@ -58,6 +58,9 @@ div.navbar.navbar {
 .form-view button:last-child {
   border-radius: 0px 5px 5px 0px;
 }
+.form-inline button:not(:last-child) {
+  border-right: none;
+}
 .measurements::before {
   background-image: url(/assets/images/timeline.svg);
   width: 2rem;
